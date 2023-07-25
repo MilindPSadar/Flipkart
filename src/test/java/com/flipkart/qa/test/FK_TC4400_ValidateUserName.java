@@ -35,7 +35,7 @@ public class FK_TC4400_ValidateUserName extends BaseClass {
   @Test
   public void validateUserName()
   {
-	  
+	  System.out.println("Hello Team");
   }
   
   @AfterMethod
