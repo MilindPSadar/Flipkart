@@ -1,21 +1,15 @@
 package com.flipkart.qa.util;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import net.bytebuddy.utility.RandomString;
+import org.testng.Reporter;
 
 public class Utility {
 	
@@ -31,10 +25,16 @@ public class Utility {
 		public static String  readConfigProp(String propName) throws IOException
 	{
 		Properties prop=new Properties();
-		FileInputStream file=new FileInputStream("E:\\EclipseProject\\flipkart\\src\\main\\java\\com\\flipkart\\qa\\config\\config.properties");
+		FileInputStream file=new FileInputStream("C:\\Users\\ahirr\\git\\Flipkart\\src\\main\\java\\com\\flipkart\\qa\\config\\config.properties");
 		prop.load(file);
 		return prop.getProperty(propName);
 	}
+		
+		public static void waitTime(int waitTimeSec) throws InterruptedException
+		{
+		Thread.sleep(waitTimeSec);
+		Reporter.log("waiting for "+waitTimeSec+" milisec", true);
+		}	
 	
 
 }

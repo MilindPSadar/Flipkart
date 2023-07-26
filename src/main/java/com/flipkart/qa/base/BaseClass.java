@@ -11,8 +11,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.Reporter;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import com.flipkart.qa.util.Utility;
 
@@ -24,13 +22,17 @@ public class BaseClass {
 
 	public static void launchBrowser() throws IOException
 	{
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("incognito");
+		opt.addArguments("start-maximized");
+	//	opt.addArguments("--disable-notifications");
 		String bName=Utility.readConfigProp("browserName");
 		if(bName.equalsIgnoreCase("chrome"))
 		{
 			//opt=new ChromeOptions();
 			//opt.addArguments("incognito");
 			Reporter.log("launching chromeBrowser", true);
-			 driver=new ChromeDriver();
+			 driver=new ChromeDriver(opt);
 			
 		}
 		else if(bName.equalsIgnoreCase("firefox"))
@@ -38,12 +40,12 @@ public class BaseClass {
 			Reporter.log("launching FireFoxBrowser", true);
 		     driver=new FirefoxDriver();
 		}
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get(Utility.readConfigProp("url"));
 		Utility.impliciteWait(driver, 5);
 			
 	}
-	public void takeScreenshot(String FileName) throws IOException
+	public static void takeScreenshot( String FileName) throws IOException
 	{
 		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String random=RandomString.make(3);
@@ -54,7 +56,7 @@ public class BaseClass {
 	public static void closeBrowser()
 	{
 		driver.quit();
-		Utility.impliciteWait(driver, 5);
+		//Utility.impliciteWait(driver, 5);
 	}
 	
 }

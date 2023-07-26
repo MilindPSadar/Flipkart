@@ -23,7 +23,9 @@ public class Listener extends BaseClass implements ITestListener {
 		String fileName=result.getName();
 		try {
 			b.takeScreenshot(fileName);
-		} catch (IOException e) {
+		} 
+		catch (IOException e) 
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

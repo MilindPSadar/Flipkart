@@ -9,7 +9,6 @@
           <include name="tearDown"/>
           <include name="openingBrowser"/>
           <include name="validateUserName"/>
-          <include name="lanuchBrowser"/>
           <include name="logIn"/>
         </methods>
       </class> <!-- com.flipkart.qa.test.FK_TC4400_ValidateUserName -->
