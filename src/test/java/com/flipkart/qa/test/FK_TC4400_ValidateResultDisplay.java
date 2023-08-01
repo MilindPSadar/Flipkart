@@ -7,12 +7,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.amazon.qa.base.BaseClass;
 import com.amazon.qa.pages.SearchItemTest;
 import com.amazon.qa.util.Utility;
-
+@Listeners(com.amazon.qa.listener.Listener.class)
 public class FK_TC4400_ValidateResultDisplay extends BaseClass {
 	SearchItemTest st;
 	
