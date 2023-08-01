@@ -10,38 +10,38 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.amazon.qa.base.BaseClass;
-import com.amazon.qa.pages.LoginPage;
+import com.amazon.qa.pages.SearchItemTest;
 import com.amazon.qa.util.Utility;
 
-public class FK_TC4400_ValidateUserName extends BaseClass {
-	//WebDriver driver;
-	LoginPage lp;
+public class FK_TC4400_ValidateResultDisplay extends BaseClass {
+	SearchItemTest st;
 	
 	@BeforeClass
 	public void openingBrowser() throws Throwable
 	{	
 		BaseClass.launchBrowser();
-		lp=new LoginPage(driver);
+		st=new SearchItemTest(driver);
 	}
 	@BeforeMethod
 	public void logIn() throws IOException
 	{
-		//lp.clickOnLoginButton();
 		Utility.impliciteWait(driver, 5);
-		lp.enterMobileNum();
-		lp.clickOnRequestForOTP();
+		st.sendProductNameInSearchBox(Utility.readConfigProp("searchItem"));
+		st.clickOnSearchButton();	
 		
 	}
   @Test
-  public void validateUserName()
+  public void validateIsResultDisplay()
   {
-	  
+	  boolean result=st.showNumberOfResult();
+	  System.out.println(result);
+	    
   }
   
   @AfterMethod
   public void logout()
   {
-	  
+	System.out.println("No logout");  
   }
   @AfterClass
   public void tearDown()

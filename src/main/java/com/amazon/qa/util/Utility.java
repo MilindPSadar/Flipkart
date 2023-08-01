@@ -31,7 +31,7 @@ public class Utility {
 		public static String  readConfigProp(String propName) throws IOException
 	{
 		Properties prop=new Properties();
-		FileInputStream file=new FileInputStream("E:\\EclipseProject\\flipkart\\src\\main\\java\\com\\flipkart\\qa\\config\\config.properties");
+		FileInputStream file=new FileInputStream("configuration\\config.properties");
 		prop.load(file);
 		return prop.getProperty(propName);
 	}
