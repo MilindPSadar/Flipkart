@@ -15,7 +15,7 @@
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.7.1</version>
-    <scope>test</scope>
+    <scope>compile</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 <dependency>
@@ -34,7 +34,9 @@
 <configuration>
             <!-- put your configurations here -->
 <suiteXmlFiles>
-<suiteXmlFile></suiteXmlFile>
+<suiteXmlFile>
+Amazontestng.xml
+</suiteXmlFile>
 </suiteXmlFiles>
           </configuration>
         </plugin>

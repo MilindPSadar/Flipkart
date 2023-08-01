@@ -39,8 +39,9 @@ public class BaseClass {
 		     driver=new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 		driver.get(Utility.readConfigProp("url"));
-		Utility.impliciteWait(driver, 5);
+		Utility.impliciteWait(driver, 20);
 			
 	}
 	public void takeScreenshot(String FileName) throws IOException
