@@ -1,4 +1,4 @@
-package com.flipkart.qa.test;
+package com.amazon.qa.test;
 
 import java.io.IOException;
 
@@ -20,11 +20,11 @@ public class FK_TC4400_ValidateResultDisplay extends BaseClass {
 	@BeforeClass
 	public void openingBrowser() throws Throwable
 	{	
-		BaseClass.launchBrowser();
+		BaseClass.launchBrowser(); 
 		st=new SearchItemTest(driver);
 	}
 	@BeforeMethod
-	public void logIn() throws IOException
+	public void searchProduct() throws IOException
 	{
 		Utility.impliciteWait(driver, 5);
 		st.sendProductNameInSearchBox(Utility.readConfigProp("searchItem"));
@@ -32,7 +32,7 @@ public class FK_TC4400_ValidateResultDisplay extends BaseClass {
 		
 	}
   @Test
-  public void validateIsResultDisplay()
+  public void validateIsResultDisplay() 
   {
 	  boolean result=st.showNumberOfResult();
 	  System.out.println(result);
@@ -45,9 +45,10 @@ public class FK_TC4400_ValidateResultDisplay extends BaseClass {
 	System.out.println("No logout");  
   }
   @AfterClass
-  public void tearDown()
+  public void tearDown() throws InterruptedException
   {
 	 BaseClass.closeBrowser();
+	 Thread.sleep(5000);
   }
   }
 

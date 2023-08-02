@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.flipkart.qa.test.FK_TC4400_ValidateUserName">
+      <class name="com.flipkart.qa.test.FK_TC4400_ValidateResultDisplay">
         <methods>
-          <include name="logout"/>
-          <include name="tearDown"/>
-          <include name="openingBrowser"/>
-          <include name="validateUserName"/>
-          <include name="lanuchBrowser"/>
           <include name="logIn"/>
+          <include name="tearDown"/>
+          <include name="validateIsResultDisplay"/>
+          <include name="logout"/>
+          <include name="openingBrowser"/>
         </methods>
-      </class> <!-- com.flipkart.qa.test.FK_TC4400_ValidateUserName -->
+      </class> <!-- com.flipkart.qa.test.FK_TC4400_ValidateResultDisplay -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

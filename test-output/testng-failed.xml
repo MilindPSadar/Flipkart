@@ -5,8 +5,8 @@
     <classes>
       <class name="com.flipkart.qa.test.FK_TC4400_ValidateResultDisplay">
         <methods>
-          <include name="logIn"/>
           <include name="tearDown"/>
+          <include name="searchProduct"/>
           <include name="validateIsResultDisplay"/>
           <include name="logout"/>
           <include name="openingBrowser"/>
