@@ -48,14 +48,14 @@ public class BaseClass {
 	{
 		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String random=RandomString.make(3);
-		File dest=new File("E:\\EclipseProject\\flipkart\\TakeScreenshot\\"+FileName+random+".png");
+		File dest=new File("TakeScreenshot\\"+FileName+random+".png");
 		FileHandler.copy(source, dest);
 	}
 
 	public static void closeBrowser()
 	{
 		driver.quit();
-		Utility.impliciteWait(driver, 5);
+		//Utility.impliciteWait(driver, 5);
 	}
 	
 }

@@ -13,7 +13,16 @@ public class Listener extends BaseClass implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		ITestListener.super.onTestSuccess(result);
+		String fileName=result.getName();
+		try {
+			b.takeScreenshot(fileName);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Reporter.log("TC "+result.getName()+" is passed", true);
+
+
 	}
 	@Override
 	public void onTestFailure(ITestResult result) {

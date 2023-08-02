@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -34,6 +36,13 @@ public class Utility {
 		FileInputStream file=new FileInputStream("configuration\\config.properties");
 		prop.load(file);
 		return prop.getProperty(propName);
+	}
+	public String readDataFromExcel(int row, int cell) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream file =new FileInputStream("excelData\\testData.xlsx");
+		String value=WorkbookFactory.create(file).getSheet("Sheet1").getRow(row).getCell(cell)
+				.getStringCellValue();
+		return value;
 	}
 	
 

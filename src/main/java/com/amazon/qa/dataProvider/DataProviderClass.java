@@ -1,14 +1,18 @@
 package com.amazon.qa.dataProvider;
 
+import java.io.IOException;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.amazon.qa.util.Utility;
 
 public class DataProviderClass {
 	
 	@DataProvider(name="TestData1")
-	public static String[][] dataForTest()
+	public static String[] dataForTest() throws IOException
 	{
-		String [][]data= {{"UserName1","Pass1"},{"UserName2","Pass2"}};
+		String []data= {"dell laptop","samsung mobile"};
 		return data;
 	}
 

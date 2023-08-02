@@ -3,15 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.flipkart.qa.test.FK_TC4400_ValidateResultDisplay">
+      <class name="com.amazon.qa.test.FK_TC4400_ValidateResultDisplay">
         <methods>
-          <include name="tearDown"/>
-          <include name="searchProduct"/>
-          <include name="validateIsResultDisplay"/>
           <include name="logout"/>
+          <include name="searchProduct"/>
           <include name="openingBrowser"/>
+          <include name="tearDown"/>
+          <include name="validateIsResultDisplay"/>
         </methods>
-      </class> <!-- com.flipkart.qa.test.FK_TC4400_ValidateResultDisplay -->
+      </class> <!-- com.amazon.qa.test.FK_TC4400_ValidateResultDisplay -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -29,12 +29,14 @@ public class SearchItemTest
 		Reporter.log("clicking on searchButton", true);
 		searchButton.click();
 	}
-	public boolean showNumberOfResult()
+	public String showNumberOfResult()
 	{
 		String result=displayResult.getText();
-		System.out.println(result);
-		return displayResult.isDisplayed();
-		
+		return result;
+	}
+	public void clearSearchBox()
+	{
+		searchBox.clear();
 	}
 	
 }
