@@ -19,7 +19,7 @@ import com.amazon.qa.util.Utility;
 import net.bytebuddy.utility.RandomString;
 
 public class BaseClass {
-	public static WebDriver driver;
+	public static WebDriver driver=null;
 	//static ChromeOptions opt;
 
 	public static void launchBrowser() throws IOException
@@ -44,14 +44,7 @@ public class BaseClass {
 		Utility.impliciteWait(driver, 20);
 			
 	}
-	public void takeScreenshot(String FileName) throws IOException
-	{
-		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String random=RandomString.make(3);
-		File dest=new File("TakeScreenshot\\"+FileName+random+".png");
-		FileHandler.copy(source, dest);
-	}
-
+	
 	public static void closeBrowser()
 	{
 		driver.quit();

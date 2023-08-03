@@ -6,16 +6,16 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-import com.amazon.qa.base.BaseClass;
+import com.amazon.qa.util.Utility;
 
-public class Listener extends BaseClass implements ITestListener {
-	BaseClass b=new BaseClass();
+
+public class Listener extends Utility implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		ITestListener.super.onTestSuccess(result);
 		String fileName=result.getName();
 		try {
-			b.takeScreenshot(fileName);
+			takeScreenshot(fileName);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,7 +31,7 @@ public class Listener extends BaseClass implements ITestListener {
 		Reporter.log("TC "+result.getName()+" is failed please try again", true);
 		String fileName=result.getName();
 		try {
-			b.takeScreenshot(fileName);
+			takeScreenshot(fileName);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

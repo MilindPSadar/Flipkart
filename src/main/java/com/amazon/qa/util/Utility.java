@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
@@ -17,9 +18,11 @@ import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.amazon.qa.base.BaseClass;
+
 import net.bytebuddy.utility.RandomString;
 
-public class Utility {
+public class Utility extends BaseClass {
 	
 	public static void impliciteWait(WebDriver driver, int time)
 	{
@@ -44,6 +47,16 @@ public class Utility {
 				.getStringCellValue();
 		return value;
 	}
+	public void takeScreenshot(String FileName) throws IOException
+	{
+		Date currentDate=new Date();
+		String screenShot=currentDate.toString().replace(" ", "-").replace(":", "-");
+		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		//String random=RandomString.make(3);
+		File dest=new File("TakeScreenshot\\"+screenShot+FileName+".png");
+		FileHandler.copy(source, dest);
+	}
+
 	
 
 }
