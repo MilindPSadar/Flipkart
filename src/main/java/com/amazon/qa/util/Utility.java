@@ -10,6 +10,7 @@ import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -55,6 +56,11 @@ public class Utility extends BaseClass {
 		//String random=RandomString.make(3);
 		File dest=new File("TakeScreenshot\\"+screenShot+FileName+".png");
 		FileHandler.copy(source, dest);
+	}
+	public static void scollIntoViewOnElement(WebElement element)
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView[true]", element);
 	}
 
 	

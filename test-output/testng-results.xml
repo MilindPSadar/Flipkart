@@ -1,101 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[launching chromeBrowser]]>
     </line>
     <line>
-      <![CDATA[entering product name in search box]]>
+      <![CDATA[clicking on hello sign in]]>
     </line>
     <line>
-      <![CDATA[clicking on searchButton]]>
+      <![CDATA[Entering mobile Number]]>
     </line>
     <line>
-      <![CDATA[TC validateIsResultDisplay is passed]]>
+      <![CDATA[clicking on continue]]>
     </line>
     <line>
-      <![CDATA[entering product name in search box]]>
+      <![CDATA[entering password]]>
     </line>
     <line>
-      <![CDATA[clicking on searchButton]]>
+      <![CDATA[clicking on sign in button]]>
     </line>
     <line>
-      <![CDATA[TC validateIsResultDisplay is passed]]>
+      <![CDATA[entering the OTP manually]]>
+    </line>
+    <line>
+      <![CDATA[clicking on OTPSignInButton]]>
+    </line>
+    <line>
+      <![CDATA[getting the user Name]]>
+    </line>
+    <line>
+      <![CDATA[TC ValidateUserName is passed]]>
+    </line>
+    <line>
+      <![CDATA[clicking on sign out ]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-08-02T15:19:05 IST" name="Suite" finished-at="2023-08-02T15:19:59 IST" duration-ms="53979">
+  <suite started-at="2023-08-03T19:54:01 IST" name="Default suite" finished-at="2023-08-03T19:56:10 IST" duration-ms="129249">
     <groups>
     </groups>
-    <test started-at="2023-08-02T15:19:05 IST" name="Test" finished-at="2023-08-02T15:19:59 IST" duration-ms="53979">
-      <class name="com.amazon.qa.test.FK_TC4400_ValidateResultDisplay">
-        <test-method is-config="true" signature="openingBrowser()[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:05 IST" name="openingBrowser" finished-at="2023-08-02T15:19:26 IST" duration-ms="20073" status="PASS">
+    <test started-at="2023-08-03T19:54:01 IST" name="Default test" finished-at="2023-08-03T19:56:10 IST" duration-ms="129249">
+      <class name="com.amazon.qa.test.LoginPageTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:54:01 IST" name="openBrowser" finished-at="2023-08-03T19:54:40 IST" duration-ms="38735" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[launching chromeBrowser]]>
             </line>
           </reporter-output>
-        </test-method> <!-- openingBrowser -->
-        <test-method is-config="true" signature="searchProduct()[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:26 IST" name="searchProduct" finished-at="2023-08-02T15:19:26 IST" duration-ms="25" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method signature="validateIsResultDisplay(java.lang.String)[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:26 IST" name="validateIsResultDisplay" data-provider="TestData1" finished-at="2023-08-02T15:19:37 IST" duration-ms="11625" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dell laptop]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="signIn()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:54:40 IST" name="signIn" finished-at="2023-08-03T19:55:59 IST" duration-ms="79029" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[entering product name in search box]]>
+              <![CDATA[clicking on hello sign in]]>
             </line>
             <line>
-              <![CDATA[clicking on searchButton]]>
+              <![CDATA[Entering mobile Number]]>
             </line>
             <line>
-              <![CDATA[TC validateIsResultDisplay is passed]]>
+              <![CDATA[clicking on continue]]>
+            </line>
+            <line>
+              <![CDATA[entering password]]>
+            </line>
+            <line>
+              <![CDATA[clicking on sign in button]]>
+            </line>
+            <line>
+              <![CDATA[entering the OTP manually]]>
+            </line>
+            <line>
+              <![CDATA[clicking on OTPSignInButton]]>
             </line>
           </reporter-output>
-        </test-method> <!-- validateIsResultDisplay -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:38 IST" name="logout" finished-at="2023-08-02T15:19:41 IST" duration-ms="3216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="searchProduct()[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:41 IST" name="searchProduct" finished-at="2023-08-02T15:19:41 IST" duration-ms="16" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method signature="validateIsResultDisplay(java.lang.String)[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:41 IST" name="validateIsResultDisplay" data-provider="TestData1" finished-at="2023-08-02T15:19:49 IST" duration-ms="7988" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[samsung mobile]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- signIn -->
+        <test-method signature="ValidateUserName()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:55:59 IST" name="ValidateUserName" finished-at="2023-08-03T19:55:59 IST" duration-ms="361" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[entering product name in search box]]>
+              <![CDATA[getting the user Name]]>
             </line>
             <line>
-              <![CDATA[clicking on searchButton]]>
-            </line>
-            <line>
-              <![CDATA[TC validateIsResultDisplay is passed]]>
+              <![CDATA[TC ValidateUserName is passed]]>
             </line>
           </reporter-output>
-        </test-method> <!-- validateIsResultDisplay -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:50 IST" name="logout" finished-at="2023-08-02T15:19:53 IST" duration-ms="3296" status="PASS">
+        </test-method> <!-- ValidateUserName -->
+        <test-method is-config="true" signature="SignOut()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:56:01 IST" name="SignOut" finished-at="2023-08-03T19:56:04 IST" duration-ms="3332" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[clicking on sign out ]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.test.FK_TC4400_ValidateResultDisplay@209da20d]" started-at="2023-08-02T15:19:53 IST" name="tearDown" finished-at="2023-08-02T15:19:59 IST" duration-ms="6241" status="PASS">
+        </test-method> <!-- SignOut -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:56:04 IST" name="tearDown" finished-at="2023-08-03T19:56:10 IST" duration-ms="5981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.qa.test.FK_TC4400_ValidateResultDisplay -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.amazon.qa.test.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

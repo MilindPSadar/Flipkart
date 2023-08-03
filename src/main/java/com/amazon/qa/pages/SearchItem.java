@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-public class SearchItemTest
+public class SearchItem
 {
 	@FindBy(id="twotabsearchtextbox")
 	private WebElement searchBox;
@@ -15,7 +15,7 @@ public class SearchItemTest
 	@FindBy(xpath="(//div[@class='a-section a-spacing-small a-spacing-top-small'])[1]")
 	private WebElement displayResult;
 	
-	public SearchItemTest(WebDriver driver)
+	public SearchItem(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

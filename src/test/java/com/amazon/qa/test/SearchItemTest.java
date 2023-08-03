@@ -13,17 +13,17 @@ import org.testng.annotations.Test;
 
 import com.amazon.qa.base.BaseClass;
 import com.amazon.qa.dataProvider.DataProviderClass;
-import com.amazon.qa.pages.SearchItemTest;
+import com.amazon.qa.pages.SearchItem;
 import com.amazon.qa.util.Utility;
 @Listeners(com.amazon.qa.listener.Listener.class)
-public class FK_TC4400_ValidateResultDisplay extends BaseClass {
-	SearchItemTest st;
+public class SearchItemTest extends BaseClass {
+	SearchItem st;
 	
 	@BeforeClass
 	public void openingBrowser() throws Throwable
 	{	
 		BaseClass.launchBrowser(); 
-		st=new SearchItemTest(driver);
+		st=new SearchItem(driver);
 	}
 	@BeforeMethod
 	public void searchProduct() throws IOException

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.amazon.qa.test.FK_TC4400_ValidateResultDisplay"/>
+      <class name="com.amazon.qa.test.SearchItemTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
