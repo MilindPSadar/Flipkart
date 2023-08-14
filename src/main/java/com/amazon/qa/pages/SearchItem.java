@@ -36,6 +36,7 @@ public class SearchItem
 	}
 	public void clearSearchBox()
 	{
+		Reporter.log("clearing the search box", false);
 		searchBox.clear();
 	}
 	

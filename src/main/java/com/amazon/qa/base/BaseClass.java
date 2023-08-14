@@ -21,10 +21,11 @@ import net.bytebuddy.utility.RandomString;
 public class BaseClass {
 	public static WebDriver driver=null;
 	//static ChromeOptions opt;
-
-	public static void launchBrowser() throws IOException
+	//@Parameters("browserName")
+	//@Test
+	public static void launchBrowser(String bName) throws IOException
 	{
-		String bName=Utility.readConfigProp("browserName");
+		//String bName=Utility.readConfigProp("browserName");
 		if(bName.equalsIgnoreCase("chrome"))
 		{
 			//opt=new ChromeOptions();
@@ -38,10 +39,10 @@ public class BaseClass {
 			Reporter.log("launching FireFoxBrowser", true);
 		     driver=new FirefoxDriver();
 		}
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
+		Reporter.log("Entering url in browser", true);
 		driver.get(Utility.readConfigProp("url"));
-		Utility.impliciteWait(driver, 20);
+		driver.manage().window().maximize();
+		Utility.impliciteWait(driver, 5);
 			
 	}
 	

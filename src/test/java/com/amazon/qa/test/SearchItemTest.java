@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.amazon.qa.base.BaseClass;
@@ -19,10 +20,11 @@ import com.amazon.qa.util.Utility;
 public class SearchItemTest extends BaseClass {
 	SearchItem st;
 	
+	@Parameters("browserName")
 	@BeforeClass
-	public void openingBrowser() throws Throwable
+	public void openingBrowser(String bName) throws Throwable
 	{	
-		BaseClass.launchBrowser(); 
+		BaseClass.launchBrowser(bName); 
 		st=new SearchItem(driver);
 	}
 	@BeforeMethod
@@ -40,10 +42,8 @@ public class SearchItemTest extends BaseClass {
 		
 	  String actualResult=st.showNumberOfResult();
 	  System.out.println(actualResult);
-	  
 	   
   }
-  
   @AfterMethod
   public void logout() throws InterruptedException
   {

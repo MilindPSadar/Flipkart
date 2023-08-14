@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.amazon.qa.base.BaseClass;
@@ -15,10 +16,11 @@ import com.amazon.qa.pages.LoginPage;
 @Listeners(com.amazon.qa.listener.Listener.class)
 public class LoginPageTest extends BaseClass {
 	LoginPage lp;
+	@Parameters("browserName")
 	@BeforeClass
-	public void openBrowser () throws IOException
+	public void openBrowser (String bName) throws IOException
 	{
-		BaseClass.launchBrowser();
+		BaseClass.launchBrowser(bName);
 		lp=new LoginPage(driver);
 		
 	}

@@ -1,99 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
     <line>
-      <![CDATA[launching chromeBrowser]]>
+      <![CDATA[launching FireFoxBrowser]]>
     </line>
     <line>
-      <![CDATA[clicking on hello sign in]]>
+      <![CDATA[TC validateIsResultDisplay is skipped]]>
     </line>
     <line>
-      <![CDATA[Entering mobile Number]]>
-    </line>
-    <line>
-      <![CDATA[clicking on continue]]>
-    </line>
-    <line>
-      <![CDATA[entering password]]>
-    </line>
-    <line>
-      <![CDATA[clicking on sign in button]]>
-    </line>
-    <line>
-      <![CDATA[entering the OTP manually]]>
-    </line>
-    <line>
-      <![CDATA[clicking on OTPSignInButton]]>
-    </line>
-    <line>
-      <![CDATA[getting the user Name]]>
-    </line>
-    <line>
-      <![CDATA[TC ValidateUserName is passed]]>
-    </line>
-    <line>
-      <![CDATA[clicking on sign out ]]>
+      <![CDATA[TC validateIsResultDisplay is skipped]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-08-03T19:54:01 IST" name="Default suite" finished-at="2023-08-03T19:56:10 IST" duration-ms="129249">
+  <suite started-at="2023-08-08T20:12:43 IST" name="Suite" finished-at="2023-08-08T20:13:05 IST" duration-ms="22387">
     <groups>
     </groups>
-    <test started-at="2023-08-03T19:54:01 IST" name="Default test" finished-at="2023-08-03T19:56:10 IST" duration-ms="129249">
-      <class name="com.amazon.qa.test.LoginPageTest">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:54:01 IST" name="openBrowser" finished-at="2023-08-03T19:54:40 IST" duration-ms="38735" status="PASS">
+    <test started-at="2023-08-08T20:12:43 IST" name="firefoxTest" finished-at="2023-08-08T20:13:05 IST" duration-ms="22387">
+      <class name="com.amazon.qa.test.SearchItemTest">
+        <test-method is-config="true" signature="openingBrowser(java.lang.String)[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:12:43 IST" name="openingBrowser" finished-at="2023-08-08T20:13:05 IST" duration-ms="22095" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:139)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:100)
+at com.amazon.qa.base.BaseClass.launchBrowser(BaseClass.java:40)
+at com.amazon.qa.test.SearchItemTest.openingBrowser(SearchItemTest.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\CHINTU\AppData\Local\Temp\selenium-manager2522549123877879212354679101847756076\selenium-manager.exe, --browser, firefox, --output, json]
+error sending request for url (https://github.com/mozilla/geckodriver/releases/latest): error trying to connect: tcp connect error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (os error 10060)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '18.0.1'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
             <line>
-              <![CDATA[launching chromeBrowser]]>
+              <![CDATA[launching FireFoxBrowser]]>
             </line>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="signIn()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:54:40 IST" name="signIn" finished-at="2023-08-03T19:55:59 IST" duration-ms="79029" status="PASS">
+        </test-method> <!-- openingBrowser -->
+        <test-method is-config="true" signature="searchProduct()[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:13:05 IST" name="searchProduct" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1691505785300" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method signature="validateIsResultDisplay(java.lang.String)[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:13:05 IST" name="validateIsResultDisplay" data-provider="TestData1" finished-at="2023-08-08T20:13:05 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dell laptop]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:139)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:100)
+at com.amazon.qa.base.BaseClass.launchBrowser(BaseClass.java:40)
+at com.amazon.qa.test.SearchItemTest.openingBrowser(SearchItemTest.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\CHINTU\AppData\Local\Temp\selenium-manager2522549123877879212354679101847756076\selenium-manager.exe, --browser, firefox, --output, json]
+error sending request for url (https://github.com/mozilla/geckodriver/releases/latest): error trying to connect: tcp connect error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (os error 10060)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '18.0.1'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
             <line>
-              <![CDATA[clicking on hello sign in]]>
-            </line>
-            <line>
-              <![CDATA[Entering mobile Number]]>
-            </line>
-            <line>
-              <![CDATA[clicking on continue]]>
-            </line>
-            <line>
-              <![CDATA[entering password]]>
-            </line>
-            <line>
-              <![CDATA[clicking on sign in button]]>
-            </line>
-            <line>
-              <![CDATA[entering the OTP manually]]>
-            </line>
-            <line>
-              <![CDATA[clicking on OTPSignInButton]]>
+              <![CDATA[TC validateIsResultDisplay is skipped]]>
             </line>
           </reporter-output>
-        </test-method> <!-- signIn -->
-        <test-method signature="ValidateUserName()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:55:59 IST" name="ValidateUserName" finished-at="2023-08-03T19:55:59 IST" duration-ms="361" status="PASS">
+        </test-method> <!-- validateIsResultDisplay -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:13:05 IST" name="logout" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1691505785335" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="searchProduct()[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:13:05 IST" name="searchProduct" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1691505785344" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method signature="validateIsResultDisplay(java.lang.String)[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:13:05 IST" name="validateIsResultDisplay" data-provider="TestData1" finished-at="2023-08-08T20:13:05 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samsung mobile]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:139)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:100)
+at com.amazon.qa.base.BaseClass.launchBrowser(BaseClass.java:40)
+at com.amazon.qa.test.SearchItemTest.openingBrowser(SearchItemTest.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\CHINTU\AppData\Local\Temp\selenium-manager2522549123877879212354679101847756076\selenium-manager.exe, --browser, firefox, --output, json]
+error sending request for url (https://github.com/mozilla/geckodriver/releases/latest): error trying to connect: tcp connect error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (os error 10060)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '18.0.1'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
             <line>
-              <![CDATA[getting the user Name]]>
-            </line>
-            <line>
-              <![CDATA[TC ValidateUserName is passed]]>
+              <![CDATA[TC validateIsResultDisplay is skipped]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ValidateUserName -->
-        <test-method is-config="true" signature="SignOut()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:56:01 IST" name="SignOut" finished-at="2023-08-03T19:56:04 IST" duration-ms="3332" status="PASS">
+        </test-method> <!-- validateIsResultDisplay -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:13:05 IST" name="logout" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1691505785373" status="SKIP">
           <reporter-output>
-            <line>
-              <![CDATA[clicking on sign out ]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- SignOut -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.test.LoginPageTest@bae7dc0]" started-at="2023-08-03T19:56:04 IST" name="tearDown" finished-at="2023-08-03T19:56:10 IST" duration-ms="5981" status="PASS">
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.test.SearchItemTest@342c38f8]" started-at="2023-08-08T20:13:05 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1691505785385" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.qa.test.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.amazon.qa.test.SearchItemTest -->
+    </test> <!-- firefoxTest -->
+  </suite> <!-- Suite -->
 </testng-results>

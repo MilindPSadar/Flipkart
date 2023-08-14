@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Test</title>
+<title>TestNG:  chromeTest1</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Test</h2><table border='1' align="center">
+<h2 align='center'>chromeTest1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 07 20:54:41 IST 2023</td>
+<td>Started on:</td><td>Tue Aug 08 19:35:14 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>312 seconds (312149 ms)</td>
+<tr><td>Total time:</td><td>183 seconds (183120 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,24 +76,21 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.amazon.qa.test.LoginPageTest.signIn()'><b>signIn</b><br>Test class: com.amazon.qa.test.LoginPageTest<br/>
-<a href="#Output-1661496538" onClick='toggleBox("Output-1661496538", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-524959843" onClick='toggleBox("Output-524959843", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1661496538" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1661496538">
+<a href="#Output-524959843" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-524959843">
 clicking on hello sign in<br/>
 Entering mobile Number<br/>
-clicking on continue<br/>
-entering password<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;ap_password&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;18.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [bd881638-f002-40e5-9174-ebac371e932b, findElement {using=xpath, value=//input[@id=&apos;ap_password&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.1, moz:accessibilityChecks: false, moz:buildID: 20230706202047, moz:debuggerAddress: 127.0.0.1:29097, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 6.3, moz:processID: 10952, moz:profile: C:\Users\CHINTU\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:29097/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bd881638-f002-40e5-9174-ebac371e932b
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d944e2e47bde864a8f322bfa57d43605, findElement {using=xpath, value=//input[@id=&apos;ap_email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.149, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\CHINTU\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65274/devtoo..., se:cdpVersion: 109.0.5414.149, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d944e2e47bde864a8f322bfa57d43605
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -108,22 +105,21 @@ Session ID: bd881638-f002-40e5-9174-ebac371e932b
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
-	at com.amazon.qa.pages.LoginPage.enterPassword(LoginPage.java:72)
-	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:32)
+	at com.amazon.qa.pages.LoginPage.enterMobileNumber(LoginPage.java:48)
+	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1661496538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1661496538'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;ap_password&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace524959843", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace524959843'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;18.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [bd881638-f002-40e5-9174-ebac371e932b, findElement {using=xpath, value=//input[@id=&apos;ap_password&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.1, moz:accessibilityChecks: false, moz:buildID: 20230706202047, moz:debuggerAddress: 127.0.0.1:29097, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 6.3, moz:processID: 10952, moz:profile: C:\Users\CHINTU\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:29097/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bd881638-f002-40e5-9174-ebac371e932b
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d944e2e47bde864a8f322bfa57d43605, findElement {using=xpath, value=//input[@id=&apos;ap_email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.149, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\CHINTU\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65274/devtoo..., se:cdpVersion: 109.0.5414.149, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d944e2e47bde864a8f322bfa57d43605
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -141,8 +137,8 @@ Session ID: bd881638-f002-40e5-9174-ebac371e932b
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
-	at com.amazon.qa.pages.LoginPage.enterPassword(LoginPage.java:72)
-	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:32)
+	at com.amazon.qa.pages.LoginPage.enterMobileNumber(LoginPage.java:48)
+	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -169,8 +165,8 @@ Session ID: bd881638-f002-40e5-9174-ebac371e932b
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>19</td>
-<td>com.amazon.qa.test.LoginPageTest@d5b810e</td></tr>
+<td>3</td>
+<td>com.amazon.qa.test.LoginPageTest@bae7dc0</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -180,51 +176,15 @@ Session ID: bd881638-f002-40e5-9174-ebac371e932b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.amazon.qa.test.LoginPageTest.tearDown()'><b>tearDown</b><br>Test class: com.amazon.qa.test.LoginPageTest</td>
-<td></td>
-<td>-1691421989</td>
-<td>com.amazon.qa.test.LoginPageTest@d5b810e</td></tr>
-<tr>
 <td title='com.amazon.qa.test.LoginPageTest.SignOut()'><b>SignOut</b><br>Test class: com.amazon.qa.test.LoginPageTest</td>
 <td></td>
-<td>-1691421989</td>
-<td>com.amazon.qa.test.LoginPageTest@d5b810e</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>-1691503697</td>
+<td>com.amazon.qa.test.LoginPageTest@bae7dc0</td></tr>
 <tr>
-<td title='com.amazon.qa.test.SearchItemTest.validateIsResultDisplay()'><b>validateIsResultDisplay</b><br>Test class: com.amazon.qa.test.SearchItemTest<br>Parameters: dell laptop<br/>
-<a href="#Output-1263861618" onClick='toggleBox("Output-1263861618", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1263861618" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1263861618">
-entering product name in search box<br/>
-clicking on searchButton<br/>
-TC validateIsResultDisplay is passed<br/>
-</div>
-</td>
+<td title='com.amazon.qa.test.LoginPageTest.tearDown()'><b>tearDown</b><br>Test class: com.amazon.qa.test.LoginPageTest</td>
 <td></td>
-<td>80</td>
-<td>com.amazon.qa.test.SearchItemTest@5a56cdac</td></tr>
-<tr>
-<td title='com.amazon.qa.test.SearchItemTest.validateIsResultDisplay()'><b>validateIsResultDisplay</b><br>Test class: com.amazon.qa.test.SearchItemTest<br>Parameters: samsung mobile<br/>
-<a href="#Output-473233037" onClick='toggleBox("Output-473233037", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-473233037" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-473233037">
-entering product name in search box<br/>
-clicking on searchButton<br/>
-TC validateIsResultDisplay is passed<br/>
-</div>
-</td>
-<td></td>
-<td>6</td>
-<td>com.amazon.qa.test.SearchItemTest@5a56cdac</td></tr>
+<td>-1691503697</td>
+<td>com.amazon.qa.test.LoginPageTest@bae7dc0</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -235,21 +195,20 @@ TC validateIsResultDisplay is passed<br/>
 </tr>
 <tr>
 <td title='com.amazon.qa.test.LoginPageTest.ValidateUserName()'><b>ValidateUserName</b><br>Test class: com.amazon.qa.test.LoginPageTest<br/>
-<a href="#Output-1564692432" onClick='toggleBox("Output-1564692432", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-921382565" onClick='toggleBox("Output-921382565", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1564692432" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1564692432">
+<a href="#Output-921382565" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-921382565">
 TC ValidateUserName is skipped<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;ap_password&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;18.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [bd881638-f002-40e5-9174-ebac371e932b, findElement {using=xpath, value=//input[@id=&apos;ap_password&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.1, moz:accessibilityChecks: false, moz:buildID: 20230706202047, moz:debuggerAddress: 127.0.0.1:29097, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 6.3, moz:processID: 10952, moz:profile: C:\Users\CHINTU\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:29097/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bd881638-f002-40e5-9174-ebac371e932b
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d944e2e47bde864a8f322bfa57d43605, findElement {using=xpath, value=//input[@id=&apos;ap_email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.149, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\CHINTU\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65274/devtoo..., se:cdpVersion: 109.0.5414.149, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d944e2e47bde864a8f322bfa57d43605
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -264,22 +223,21 @@ Session ID: bd881638-f002-40e5-9174-ebac371e932b
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
-	at com.amazon.qa.pages.LoginPage.enterPassword(LoginPage.java:72)
-	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:32)
+	at com.amazon.qa.pages.LoginPage.enterMobileNumber(LoginPage.java:48)
+	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1564692432", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1564692432'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;ap_password&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace921382565", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace921382565'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;18.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [bd881638-f002-40e5-9174-ebac371e932b, findElement {using=xpath, value=//input[@id=&apos;ap_password&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.1, moz:accessibilityChecks: false, moz:buildID: 20230706202047, moz:debuggerAddress: 127.0.0.1:29097, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 6.3, moz:processID: 10952, moz:profile: C:\Users\CHINTU\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:29097/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bd881638-f002-40e5-9174-ebac371e932b
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d944e2e47bde864a8f322bfa57d43605, findElement {using=xpath, value=//input[@id=&apos;ap_email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.149, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\CHINTU\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65274/devtoo..., se:cdpVersion: 109.0.5414.149, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d944e2e47bde864a8f322bfa57d43605
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -297,8 +255,8 @@ Session ID: bd881638-f002-40e5-9174-ebac371e932b
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
-	at com.amazon.qa.pages.LoginPage.enterPassword(LoginPage.java:72)
-	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:32)
+	at com.amazon.qa.pages.LoginPage.enterMobileNumber(LoginPage.java:48)
+	at com.amazon.qa.test.LoginPageTest.signIn(LoginPageTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -326,7 +284,7 @@ Session ID: bd881638-f002-40e5-9174-ebac371e932b
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
 <td>0</td>
-<td>com.amazon.qa.test.LoginPageTest@d5b810e</td></tr>
+<td>com.amazon.qa.test.LoginPageTest@bae7dc0</td></tr>
 </table><p>
 </body>
 </html>
