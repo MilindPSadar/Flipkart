@@ -29,10 +29,11 @@ public class BaseClass {
 		if(bName.equalsIgnoreCase("chrome"))
 		{
 			//opt=new ChromeOptions();
-			//opt.addArguments("incognito");
+			//opt.addArguments("incognito");  
+ 
 			Reporter.log("launching chromeBrowser", true);
 			 driver=new ChromeDriver();
-			
+			 
 		}
 		else if(bName.equalsIgnoreCase("firefox"))
 		{
