@@ -24,45 +24,41 @@ import com.amazon.qa.base.BaseClass;
 import net.bytebuddy.utility.RandomString;
 
 public class Utility extends BaseClass {
-	
-	public static void impliciteWait(WebDriver driver, int time)
-	{
+
+	public static void impliciteWait(WebDriver driver, int time) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
 	}
-	public static void expliciteWait(WebDriver driver, int time,WebElement element)
-	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(time));
+
+	public static void expliciteWait(WebDriver driver, int time, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-		public static String  readConfigProp(String propName) throws IOException
-	{
-		Properties prop=new Properties();
-		FileInputStream file=new FileInputStream("configuration\\config.properties");
+
+	public static String readConfigProp(String propName) throws IOException {
+		Properties prop = new Properties();
+		FileInputStream file = new FileInputStream("configuration\\config.properties");
 		prop.load(file);
 		return prop.getProperty(propName);
 	}
-	public String readDataFromExcel(int row, int cell) throws EncryptedDocumentException, IOException
-	{
-		FileInputStream file =new FileInputStream("excelData\\testData.xlsx");
-		String value=WorkbookFactory.create(file).getSheet("Sheet1").getRow(row).getCell(cell)
-				.getStringCellValue();
+
+	public String readDataFromExcel(int row, int cell) throws EncryptedDocumentException, IOException {
+		FileInputStream file = new FileInputStream("excelData\\testData.xlsx");
+		String value = WorkbookFactory.create(file).getSheet("Sheet1").getRow(row).getCell(cell).getStringCellValue();
 		return value;
 	}
-	public void takeScreenshot(String FileName) throws IOException
-	{
-		Date currentDate=new Date();
-		String screenShot=currentDate.toString().replace(" ", "-").replace(":", "-");
-		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		//String random=RandomString.make(3);
-		File dest=new File("TakeScreenshot\\"+screenShot+FileName+".png");
+
+	public void takeScreenshot(String FileName) throws IOException {
+		Date currentDate = new Date();
+		String screenShot = currentDate.toString().replace(" ", "-").replace(":", "-");
+		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		// String random=RandomString.make(3);
+		File dest = new File("TakeScreenshot\\" + screenShot + FileName + ".png");
 		FileHandler.copy(source, dest);
 	}
-	public static void scollIntoViewOnElement(WebElement element)
-	{
-		JavascriptExecutor js=(JavascriptExecutor)driver;
+
+	public static void scollIntoViewOnElement(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView[true]", element);
 	}
-
-	
 
 }

@@ -16,46 +16,44 @@ import com.amazon.qa.base.BaseClass;
 import com.amazon.qa.dataProvider.DataProviderClass;
 import com.amazon.qa.pages.SearchItem;
 import com.amazon.qa.util.Utility;
+
 @Listeners(com.amazon.qa.listener.Listener.class)
 public class SearchItemTest extends BaseClass {
 	SearchItem st;
-	
+
 	@Parameters("browserName")
 	@BeforeClass
-	public void openingBrowser(String bName) throws Throwable
-	{	
-		BaseClass.launchBrowser(bName); 
-		st=new SearchItem(driver);
+	public void openingBrowser(String bName) throws Throwable {
+		BaseClass.launchBrowser(bName);
+		st = new SearchItem(driver);
 	}
-	@BeforeMethod
-	public void searchProduct() throws IOException
-	{
-		Utility.impliciteWait(driver, 5);
-			
-		
-	}
-  @Test(dataProvider="TestData1", dataProviderClass=DataProviderClass.class)
-  public void validateIsResultDisplay(String productName) 
-  {
-	  st.sendProductNameInSearchBox(productName);
-		st.clickOnSearchButton();
-		
-	  String actualResult=st.showNumberOfResult();
-	  System.out.println(actualResult);
-	   
-  }
-  @AfterMethod
-  public void logout() throws InterruptedException
-  {
-	  st.clearSearchBox();
-	  Thread.sleep(3000);
-	System.out.println("No logout");  
-  }
-  @AfterClass
-  public void tearDown() throws InterruptedException
-  {
-	 BaseClass.closeBrowser();
-	 Thread.sleep(5000);
-  }
-  }
 
+	@BeforeMethod
+	public void searchProduct() throws IOException {
+		Utility.impliciteWait(driver, 5);
+
+	}
+
+	@Test(dataProvider = "TestData1", dataProviderClass = DataProviderClass.class)
+	public void validateIsResultDisplay(String productName) {
+		st.sendProductNameInSearchBox(productName);
+		st.clickOnSearchButton();
+
+		String actualResult = st.showNumberOfResult();
+		System.out.println(actualResult);
+
+	}
+
+	@AfterMethod
+	public void logout() throws InterruptedException {
+		st.clearSearchBox();
+		Thread.sleep(3000);
+		System.out.println("No logout");
+	}
+
+	@AfterClass
+	public void tearDown() throws InterruptedException {
+		BaseClass.closeBrowser();
+		Thread.sleep(5000);
+	}
+}

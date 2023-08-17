@@ -13,46 +13,46 @@ import org.testng.annotations.Test;
 
 import com.amazon.qa.base.BaseClass;
 import com.amazon.qa.pages.LoginPage;
+
 @Listeners(com.amazon.qa.listener.Listener.class)
 public class LoginPageTest extends BaseClass {
 	LoginPage lp;
+
 	@Parameters("browserName")
 	@BeforeClass
-	public void openBrowser (String bName) throws IOException
-	{
+	public void openBrowser(String bName) throws IOException {
 		BaseClass.launchBrowser(bName);
-		lp=new LoginPage(driver);
-		
+		lp = new LoginPage(driver);
+
 	}
+
 	@BeforeMethod
-	public void signIn() throws IOException, InterruptedException
-	{
+	public void signIn() throws IOException, InterruptedException {
 		lp.clickOnHelloSign();
 		lp.enterMobileNumber();
 		lp.clickOnContinue();
-		//lp.clickOnShowPasswordCheckBox();
+		// lp.clickOnShowPasswordCheckBox();
 		lp.enterPassword();
 		lp.clickOnSignInButton();
 		lp.enterOTPAndClickonSignIn();
-		
+
 	}
-	
+
 	@Test
-	public void ValidateUserName() 
-	{
-		String actualResult=lp.getUserName();
-		String expectedResult="Hello, milind";
-		Assert.assertEquals(actualResult, expectedResult," actual and expected name not matching");
-		
+	public void ValidateUserName() {
+		String actualResult = lp.getUserName();
+		String expectedResult = "Hello, milind";
+		Assert.assertEquals(actualResult, expectedResult, " actual and expected name not matching");
+
 	}
+
 	@AfterMethod
-	public void SignOut()
-	{
+	public void SignOut() {
 		lp.clickOnSignOut();
 	}
+
 	@AfterClass
-	public void tearDown() throws InterruptedException
-	{
+	public void tearDown() throws InterruptedException {
 		BaseClass.closeBrowser();
 		Thread.sleep(5000);
 	}

@@ -8,7 +8,7 @@
         <methods>
           <include name="logout"/>
           <include name="searchProduct"/>
-          <include name="validateIsResultDisplay"/>
+          <include name="validateIsResultDisplay" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="openingBrowser"/>
         </methods>
