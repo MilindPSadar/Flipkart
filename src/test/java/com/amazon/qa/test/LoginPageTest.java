@@ -53,7 +53,8 @@ public class LoginPageTest extends BaseClass {
 
 	@AfterClass
 	public void tearDown() throws InterruptedException {
-		BaseClass.closeBrowser();
-		Thread.sleep(5000);
+		driver.quit();
+		//BaseClass.closeBrowser();
+		//Thread.sleep(5000);
 	}
 }

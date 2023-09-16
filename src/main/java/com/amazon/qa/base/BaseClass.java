@@ -2,7 +2,6 @@ package com.amazon.qa.base;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +18,7 @@ import com.amazon.qa.util.Utility;
 import net.bytebuddy.utility.RandomString;
 
 public class BaseClass {
-	public static WebDriver driver=null;
+	public static WebDriver driver;
 	//static ChromeOptions opt;
 	//@Parameters("browserName")
 	//@Test
@@ -47,10 +46,10 @@ public class BaseClass {
 			
 	}
 	
-	public static void closeBrowser()
+	/*public static void closeBrowser()
 	{
 		driver.quit();
 		//Utility.impliciteWait(driver, 5);
-	}
+	}*/
 	
 }
